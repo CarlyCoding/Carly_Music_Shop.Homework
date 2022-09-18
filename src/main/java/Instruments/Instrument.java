@@ -10,6 +10,10 @@ public abstract class Instrument implements iPlay {
     private double buy;
     private double sell;
 
+//    Notes- After completing the code for this I would amend this by removing buy and sell from here and
+//    have them inherited from stock class so that instruments could be easily added and methods not be
+//    mixed up.
+
     public Instrument(String brand, String family, String colour, String sound, double buy, double sell){
         this.brand = brand;
         this.family = family;
