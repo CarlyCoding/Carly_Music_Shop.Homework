@@ -6,20 +6,17 @@ import Interfaces.iSell;
 
 import java.util.ArrayList;
 
-public class Shop implements iSell {
+public class Shop {
 
-    private ArrayList <Instrument> shopStock;
+    private ArrayList <iSell> shopStock;
     private String name;
     private double till;
-    private double priceBought;
-    private double priceSold;
 
-    public Shop(String name, double till, double priceBought, double priceSold){
+
+    public Shop(String name, double till){
         this.name = name;
         this.till = till;
-        this.priceBought = priceBought;
-        this.priceSold = priceSold;
-        this.shopStock = new ArrayList<Instrument>();
+        this.shopStock = new ArrayList<iSell>();
     }
 
     public String getName(){
@@ -30,16 +27,18 @@ public class Shop implements iSell {
         return till;
     }
 
-    public double getPriceBought(){
-        return priceBought;
+
+    public void addToStock(iSell item){
+        this.shopStock.add(item);
     }
 
-    public double getPriceSold(){
-        return priceSold;
+    public void removeFromStock(iSell item){
+        this.shopStock.remove(item);
+    }
+
+    public int getStockCount(){
+        return this.shopStock.size();
     }
 
 
-    public double calculateMarkup() {
-       return (priceSold - priceBought);
-    }
 }

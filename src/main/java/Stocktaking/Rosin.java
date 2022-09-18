@@ -1,4 +1,11 @@
 package Stocktaking;
 
-public class Rosin {
+import Interfaces.iSell;
+
+public class Rosin extends Stock {
+
+    public Rosin(String stockItemDescription, double priceBought, double priceSold) {
+        super(stockItemDescription, priceBought, priceSold);
+    }
+
 }
