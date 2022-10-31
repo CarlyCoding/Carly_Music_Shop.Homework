@@ -1,0 +1,1 @@
+Music shop Java homework- a homework assignment to model a music shop in Java. The music shop contained classes for different instrument types, as well as items to be sold. The shop uses interfaces and superclasses. TDD was used to ensure all code was written correctly. 
